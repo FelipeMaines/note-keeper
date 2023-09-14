@@ -1,0 +1,34 @@
+{
+  "notas": [
+    {
+      "id": 1,
+      "titulo": "Lavar o cachorro 🦮",
+      "conteudo": "Pegar o shampoo > pegar a toalha",
+      "tema": "warning"
+    },
+    {
+      "titulo": "Nota Editada 2",
+      "conteudo": "Testando",
+      "tema": "dark",
+      "id": 3
+    },
+    {
+      "titulo": "Teste 2",
+      "conteudo": "Testando",
+      "tema": "dark",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "titulo": "Lavar o cachorro 🦮",
+      "conteudo": "Pegar a toalha > pegar o shampoo",
+      "tema": "dark"
+    },
+    {
+      "id": 6,
+      "titulo": "Lavar o cachorro 2🦮",
+      "conteudo": "Pegar a toalha > pegar o shampoo",
+      "tema": "dark"
+    }
+  ]
+}
