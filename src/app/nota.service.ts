@@ -30,6 +30,13 @@ export class NotaService {
         return this.http.get<Nota[]>(this.api_url);
     }
 
+    selecionarTodosComIdCategoria(idCategoria: number) {
+        console.log('entrei metodo filtro')
+        console.log(`http://localhost:3000/categorias/${idCategoria}/notas`);
+        
+        return this.http.get<Nota[]>(`http://localhost:3000/categorias/${idCategoria}/notas`);
+    }
+
     selecionarPorId(id: number){
         return this.http.get<Nota>(this.api_url + '/' + id);
     }
