@@ -3,9 +3,11 @@ export class Nota{
   titulo: string;
   conteudo: string;
   tema: Tema;
+  categoriaId: number;
 
-  constructor(titulo: string, conteudo: string, tema: Tema, id?: number) {
+  constructor(titulo: string, conteudo: string, tema: Tema, CategoriaId:number ,id?: number) {
     this.id = id;
+    this.categoriaId = CategoriaId;
     this.titulo = titulo;
     this.conteudo = conteudo;
     this.tema = tema;

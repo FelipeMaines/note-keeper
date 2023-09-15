@@ -1,32 +1,69 @@
 {
+  "categorias": [
+    {
+      "titulo": "Lazer",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "titulo": "Mercado"
+    },
+    {
+      "id": 3,
+      "titulo": "Trabalho"
+    },
+    {
+      "titulo": "Testes HTTP na Aula",
+      "id": 4
+    }
+  ],
   "notas": [
     {
       "id": 1,
       "titulo": "Lavar o cachorro 🦮",
       "conteudo": "Pegar o shampoo > pegar a toalha",
-      "tema": "warning"
+      "tema": "warning",
+      "categoriaId": 1
     },
     {
-      "titulo": "Nota Editada 2",
-      "conteudo": "Testando",
-      "tema": "dark",
-      "id": 3
+      "id": 2,
+      "titulo": "Planejar as Aulas de Angular",
+      "conteudo": "Pesquisar material",
+      "tema": "info",
+      "categoriaId": 3
     },
     {
-      "titulo": "Teste 2",
-      "conteudo": "Testando",
-      "tema": "dark",
+      "id": 3,
+      "titulo": "Atualizar Aplicações Angular",
+      "conteudo": "Preparar projetos para as aulas",
+      "tema": "danger",
+      "categoriaId": 3
+    },
+    {
+      "titulo": "Teste Insomnia",
+      "conteudo": "Teste realizado pelo client do Insomnia",
+      "tema": "danger",
+      "categoriaId": 3,
       "id": 4
     },
     {
-      "id": 5,
+      "categoriaId": 0,
+      "titulo": "Lavar o cachorro 🦮",
+      "conteudo": "Pegar a toalha > pegar o shampoo",
+      "tema": "dark",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "categoriaId": "2",
       "titulo": "Lavar o cachorro 🦮",
       "conteudo": "Pegar a toalha > pegar o shampoo",
       "tema": "dark"
     },
     {
-      "id": 6,
-      "titulo": "Lavar o cachorro 2🦮",
+      "id": 7,
+      "categoriaId": "2",
+      "titulo": "Lavar o cachorro 🦮 2",
       "conteudo": "Pegar a toalha > pegar o shampoo",
       "tema": "dark"
     }

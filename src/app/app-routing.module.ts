@@ -5,12 +5,17 @@ import { computeStyles } from '@popperjs/core';
 import { CriarNotaComponent } from './components/notas/criar-nota/criar-nota.component';
 import { EditarNotaComponent } from './components/notas/editar-nota/editar-nota.component';
 import { ExcluirNotaComponent } from './components/notas/excluir-nota/excluir-nota.component';
+import { ListarCategoriasComponent } from './components/categorias/listar-categorias/listar-categorias.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'notas/listar',
+    redirectTo: 'categorias/listar',
     pathMatch: 'full'
+  },
+  {
+    path: 'categorias/listar',
+    component: ListarCategoriasComponent
   },
   {
     path: 'notas/listar',
@@ -27,6 +32,10 @@ const routes: Routes = [
   {
     path: 'notas/excluir/:id',
     component: ExcluirNotaComponent,
+  },
+  {
+    path: 'categorias/:id/notas',
+    component: ListarNotasComponent,
   },
 ];
 

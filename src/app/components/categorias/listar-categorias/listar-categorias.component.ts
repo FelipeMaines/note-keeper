@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Categoria } from '../../categoria';
+import { CategoriaService } from '../../categoria.service';
 
 @Component({
   selector: 'app-listar-categorias',
@@ -7,6 +8,15 @@ import { Categoria } from '../../categoria';
   styleUrls: ['./listar-categorias.component.css']
 })
 
-export class ListarCategoriasComponent {
+export class ListarCategoriasComponent implements OnInit{
+  categorias: Categoria[] = [];
 
+  constructor(private servicoCategoria: CategoriaService){
+
+  }
+  ngOnInit(): void {
+    this.servicoCategoria.selecionarTodos().subscribe(res => this.categorias = res);
+  }
+
+  
 }

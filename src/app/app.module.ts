@@ -12,8 +12,9 @@ import { EditarNotaComponent } from './components/notas/editar-nota/editar-nota.
 import { ExcluirNotaComponent } from './components/notas/excluir-nota/excluir-nota.component';
 import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardCategoriaComponent } from './documents/categorias/card-categoria/card-categoria.component';
+import { CardCategoriaComponent } from './components/categorias/card-categoria/card-categoria.component';
 import { ListarCategoriasComponent } from './components/categorias/listar-categorias/listar-categorias.component';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,9 @@ import { ListarCategoriasComponent } from './components/categorias/listar-catego
       positionClass: 'toast-bottom-right'
     }),
     HttpClientModule,
+    NgbModule,
+    NgbDropdownModule,
+
   ],
   
   providers: [],
