@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardCategoriaComponent } from './components/categorias/card-categoria/card-categoria.component';
 import { ListarCategoriasComponent } from './components/categorias/listar-categorias/listar-categorias.component';
 import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CriarCategoriaComponent } from './components/categorias/criar-categoria/criar-categoria.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ExcluirNotaComponent,
     CardCategoriaComponent,
     ListarCategoriasComponent,
+    CriarCategoriaComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,10 +16,13 @@
         <label for="conteudo" class="form-label fs-5 fw-semibold">Conteúdo</label>
         <textarea [(ngModel)]="nota.conteudo" name="conteudo" class="form-control" id="conteudo" rows="3"></textarea>
       </div>
-
-      <select [(ngModel)]="nota.categoriaId" class="form-select" aria-label="Default select example" name="categoriaId">
-        <option selected="true" [value]="categoria.id" *ngFor="let categoria of categorias"  selected>{{categoria.titulo}}</option>
-      </select>
+      <!-- aqui -->
+      <div>
+        <label for="Categoria" class="form-label fs-5 fw-semibold">Categoria</label>
+        <select [(ngModel)]="nota.categoriaId" class="form-select" aria-label="Default select example" name="categoriaId">
+          <option selected="true" [value]="categoria.id" *ngFor="let categoria of categorias"  selected>{{categoria.titulo}}</option>
+        </select>
+      </div>
 
       <label for="tema" class="form-label fs-5 fw-semibold">Tema</label>
       <div>

@@ -6,12 +6,16 @@ import { Categoria } from "./categoria";
     providedIn: 'root',
 })
 
-export class CategoriaService{
-    constructor(private http: HttpClient){}
+export class CategoriaService {
+    constructor(private http: HttpClient) { }
+    url: string = "http://localhost:3000/categorias";
 
-    url:string = "http://localhost:3000/categorias";
+    Criar(categoria: Categoria) {
+        return this.http.post<Categoria>(this.url, categoria);
+    }
 
-    selecionarTodos(){
+
+    selecionarTodos() {
         return this.http.get<Categoria[]>(this.url);
     }
 }
