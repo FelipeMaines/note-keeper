@@ -16,7 +16,6 @@ export class CardCategoriaComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   navegateToNotes(id: number | undefined){
-    alert('entou')
     this.router.navigate([`categorias/${id}/notas`])
   }
 }

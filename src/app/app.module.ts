@@ -16,6 +16,9 @@ import { CardCategoriaComponent } from './components/categorias/card-categoria/c
 import { ListarCategoriasComponent } from './components/categorias/listar-categorias/listar-categorias.component';
 import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CriarCategoriaComponent } from './components/categorias/criar-categoria/criar-categoria.component';
+import { EditarCategoriaComponent } from './components/categorias/editar-categoria/editar-categoria.component';
+import { ExcluirCategoriaComponent } from './components/categorias/excluir-categoria/excluir-categoria.component';
+import { ListarNotasArquivoComponent } from './components/notas/listar-notas-arquivo/listar-notas-arquivo.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { CriarCategoriaComponent } from './components/categorias/criar-categoria
     CardCategoriaComponent,
     ListarCategoriasComponent,
     CriarCategoriaComponent,
+    EditarCategoriaComponent,
+    ExcluirCategoriaComponent,
+    ListarNotasArquivoComponent,
   ],
   imports: [
     BrowserModule,

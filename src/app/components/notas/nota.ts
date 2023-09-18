@@ -4,6 +4,7 @@ export class Nota{
   conteudo: string;
   tema: Tema;
   categoriaId: number;
+  arquivada?: boolean = false;
 
   constructor(titulo: string, conteudo: string, tema: Tema, CategoriaId:number ,id?: number) {
     this.id = id;

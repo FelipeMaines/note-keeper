@@ -6,15 +6,15 @@ import { Categoria } from '../../categoria';
 import { CategoriaService } from '../../categoria.service';
 
 @Component({
-  selector: 'app-listar-notas',
-  templateUrl: './listar-notas.component.html',
-  styleUrls: ['./listar-notas.component.css']
+  selector: 'app-listar-notas-arquivo',
+  templateUrl: './listar-notas-arquivo.component.html',
+  styleUrls: ['./listar-notas-arquivo.component.css']
 })
-export class ListarNotasComponent implements OnInit {
+export class ListarNotasArquivoComponent implements OnInit {
   notas: Nota[] = [];
   categorias: Categoria[] = [];
 
-  constructor(private notaService: NotaService,private categoriaService: CategoriaService ,private route: ActivatedRoute) { }
+  constructor(private notaService: NotaService, private categoriaService: CategoriaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.PegarCategorias();
@@ -23,7 +23,7 @@ export class ListarNotasComponent implements OnInit {
 
   filtrarPorCategoria(idCategoria: number | undefined){
     this.notaService.selecionarTodosComIdCategoria(idCategoria!).subscribe(res => {
-      let valores: Nota[] = res.filter(n => n.arquivada == false)
+      let valores: Nota[] = res.filter(n => n.arquivada == true)
       this.notas = valores;
     });
   }
@@ -38,14 +38,14 @@ export class ListarNotasComponent implements OnInit {
     if (id != undefined && !Number.isNaN(id)) {
 
       this.notaService.selecionarTodosComIdCategoria(id).subscribe(n => {
-        let valores: Nota[] = n.filter(res => res.arquivada == false)
+        let valores: Nota[] = n.filter(res => res.arquivada == true)
         console.log('numero')
         console.log(valores);
         this.notas = valores;
       });
     } else {
       this.notaService.selecionarTodos().subscribe(n => {
-        let valores = n.filter(res => res.arquivada == false)
+        let valores = n.filter(res => res.arquivada == true)
         console.log('numero')
 
         console.log(valores);
