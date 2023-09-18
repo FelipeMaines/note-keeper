@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Nota } from '../nota';
 import { NotaService } from 'src/app/nota.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-nota',
@@ -9,28 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./card-nota.component.css']
 })
 export class CardNotaComponent {
-@Input() nota: Nota = {
-  id: 0,
-  categoriaId: 0,
-  titulo: "Nada inserido",
-  conteudo: "Nada inserido",
-  tema: 'dark',
-  arquivada: false
-} 
+  @Input() nota: Nota = {
+    id: 0,
+    categoriaId: 0,
+    titulo: "Nada inserido",
+    conteudo: "Nada inserido",
+    tema: 'dark',
+    arquivada: false
+  }
 
-constructor(private servicoNota: NotaService, private router: Router){
+  constructor(private servicoNota: NotaService) {}
 
-}
+  arquivaNota() {
+    if (this.nota.arquivada == false)
+      this.nota.arquivada = true;
+    else
+      this.nota.arquivada = false;
 
-arquivaNota(){
-  this.nota.arquivada = true;
-
-  this.servicoNota.arquivarNota(this.nota).subscribe();
-
-  this.router.navigate(['/']);
-
-  this.router.navigate(['/notas/listar']);
-
-}
-
+    this.servicoNota.arquivarNota(this.nota).subscribe();
+    
+    location.reload()
+  }
 }

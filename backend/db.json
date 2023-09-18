@@ -52,7 +52,7 @@
       "titulo": "Cs",
       "conteudo": "Abrir cs > ser amassado por newba",
       "tema": "danger",
-      "arquivada": true
+      "arquivada": false
     },
     {
       "id": 9,
@@ -60,10 +60,10 @@
       "titulo": "Limpar a casa",
       "conteudo": "Pegar a vassoura : Varrer : Dormir",
       "tema": "info",
-      "arquivada": true
+      "arquivada": false
     },
     {
-      "arquivada": true,
+      "arquivada": false,
       "id": 10,
       "categoriaId": "2",
       "titulo": "Pegar coisa p comer",
