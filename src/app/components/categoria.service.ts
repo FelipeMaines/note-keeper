@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Categoria } from "./categoria";
+import { environment } from "src/environments/environment.development";
 
 @Injectable({
     providedIn: 'root',
@@ -9,7 +10,7 @@ import { Categoria } from "./categoria";
 export class CategoriaService {
 
     constructor(private http: HttpClient) { }
-    url: string = "http://localhost:3000/categorias";
+    url: string = `${environment.API_URL}/api/categorias`;
 
     Criar(categoria: Categoria) {
         return this.http.post<Categoria>(this.url, categoria);

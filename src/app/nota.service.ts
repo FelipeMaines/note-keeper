@@ -2,12 +2,13 @@ import { createInjectableType } from "@angular/compiler";
 import { Nota } from "./components/notas/nota";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { environment } from "src/environments/environment.development";
 
 @Injectable({
     providedIn: 'root',
 })
 export class NotaService {
-    private api_url = "http://localhost:3000/notas";
+    private api_url = `${ environment.API_URL}/api/notas`;
     constructor(private http: HttpClient) { }
 
 
@@ -31,7 +32,7 @@ export class NotaService {
     }
 
     selecionarTodosComIdCategoria(idCategoria: number) {
-        return this.http.get<Nota[]>(`http://localhost:3000/categorias/${idCategoria}/notas`);
+        return this.http.get<Nota[]>(`${this.api_url}/api/categorias/${idCategoria}/notas`);
     }
 
     arquivarNota(nota: Nota){
