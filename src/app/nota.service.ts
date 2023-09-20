@@ -32,7 +32,7 @@ export class NotaService {
     }
 
     selecionarTodosComIdCategoria(idCategoria: number) {
-        return this.http.get<Nota[]>(`${this.api_url}/api/categorias/${idCategoria}/notas`);
+        return this.http.get<Nota[]>(`${environment.API_URL}/api/categorias/${idCategoria}/notas`);
     }
 
     arquivarNota(nota: Nota){
