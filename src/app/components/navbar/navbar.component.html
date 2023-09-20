@@ -1,14 +1,26 @@
 <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid px-lg-4">
-      <a class="navbar-brand text-primary fw-semibold" routerLink="/">
-        <!-- <i class="bi bi-bookmarks-fill"></i> -->
-        NoteKeeper
-      </a>
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand text-primary fw-semibold" routerLink="/">
+      <!-- <i class="bi bi-bookmarks-fill"></i> -->
+      NoteKeeper
+    </a>
 
-      <div class="d-flex justify-content-end gap-4">
-        <a class="nav-link fs-5" routerLink="categorias/listar">Categorias</a>
-        <a class="nav-link fs-5" href="notas/listar">Notas</a>
-        <a class="nav-link fs-5" href="notas/listar/arquivo">Arquivo</a>
-      </div>
+    <div class="d-flex justify-content-end gap-4">
+      <a class="nav-link fs-5" routerLink="categorias/listar">
+        <button routerLinkActive="btn-primary text-light" class="btn btn-outline-primary px-4">
+          Categoria
+        </button>
+      </a>
+      <a class="nav-link fs-5 card" href="notas/listar">
+        <button routerLinkActive="btn-primary text-light" class="btn btn-outline-primary px-4">
+          Notas
+        </button>
+      </a>
+      <a class="nav-link fs-5" href="notas/listar/arquivo">
+        <button routerLinkActive="btn-primary text-light" class="btn btn-outline-primary px-4">
+          Arquivo
+        </button>
+      </a>
     </div>
-  </nav>
+  </div>
+</nav>
